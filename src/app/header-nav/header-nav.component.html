@@ -1,0 +1,199 @@
+<div id="mainHeader" [ngClass]="isHeaderVisible ? 'show-header' : 'hide-header'"
+  class="blurer row fixed-top d-flex align-items-center justify-content-evenly " style="height: 9vh;">
+
+  <div
+    class="col-12 col-md-12 px-3 px-0 d-flex h-100 align-items-center justify-content-md-evenly  justify-content-between hoverHeader">
+
+    <div class="col-md-1 col-3 d-md-flex align-items-center justify-content-start justify-content-md-center ">
+      <img src="bocxyLogo.png" alt="Logo" class="col-12 " />
+    </div>
+
+
+
+    <div class="col-6 d-none d-md-flex align-items-center justify-content-between">
+      <li class="list-unstyled" *ngFor="let link of navItems">
+
+        <!-- Dropdown links -->
+        <!-- <ng-container *ngIf="link === 'Products' || link === 'Services' || link == 'Resources' ; else normalLink">
+          <div class="dropdown ">
+            <a class="text-decoration-none dropdown-toggle" style="font-size: 15px; cursor: pointer;"
+              [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ link }}
+            </a>
+
+            <div ngbDropdown>
+              <div ngbDropdownMenu>
+                <button ngbDropdownItem *ngFor="let item of link === 'Products' ? productDropDown : serviceDropDown"
+                  (click)="routeTo(item, item)">
+                  <i class="bi" [ngClass]="iconMap[item].icon" [style.color]="iconMap[item].color"
+                    style="margin-right:6px;"></i>
+
+                  {{ item }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container> -->
+
+        <!-- existing section -->
+        <ng-container *ngIf="link === 'Products' || link === 'Services' || link == 'Resources' ; else normalLink">
+          <div class="dropdown ">
+            <a class="text-decoration-none dropdown-toggle" style="font-size: 15px; cursor: pointer;"
+              [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ link }}
+            </a>
+
+            <div ngbDropdown>
+              <div ngbDropdownMenu>
+                <button ngbDropdownItem *ngFor="let item of link === 'Products' ? productDropDown 
+                      : link === 'Services' ? serviceDropDown 
+                      : resourceDropDown" (click)="routeTo(item, item)">
+                  <i class="bi" [ngClass]="iconMap[item].icon" [style.color]="iconMap[item].color"
+                    style="margin-right:6px;"></i>
+                  {{ item }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- Normal links -->
+        <ng-template #normalLink>
+          <a class="text-decoration-none" style="font-size: 15px; cursor: pointer;"
+            [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" (click)="scrollTo(link)">
+            {{ link }}
+          </a>
+        </ng-template>
+
+      </li>
+    </div>
+
+
+
+
+    <!-- Theme Toggle -->
+    <!-- <div class="col-1 col-md-1 me-3 me-md-0 d-flex flex-row-reverse align-items-center justify-content-evenly">
+      <input type="checkbox" class="col-1 border border-1" id="themeToggle" (change)="toggleTheme()"
+        [checked]="isDarkMode" />
+      <img class="col-8 me-2 me-md-0 col-md-2" [src]="isDarkMode ? 'night-mode.png' : 'light-mode.png'"
+        [ngStyle]="{ filter: isDarkMode ? 'invert(1)' : 'none' }" alt="Theme icon" (click)="scrollTo('Careers')">
+    </div> -->
+
+    <div class="col-7   col-md-2 me-3 me-md-0 d-flex  align-items-center justify-content-end">
+      <a class="btn btn-B text-white border-0 py-2  b-fs " (click)="scrollTo('Contact')">Book a
+        free
+        Demo</a>
+      <span class="text-black col-1 d-md-none fs-3 ms-4 " (click)="toggleMenuBar()">
+        ☰
+      </span>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+<div class=" text-black d-flex flex-column align-items-center d-md-none" [ngClass]="{ 'd-none': !isMenuBarOpen }"
+  id="menuBarForMobile" style="width: 70vw;height: 100vh;">
+  <div class="col-12 d-flex align-items-center justify-content-end pe-3 py-2"> <button (click)="toggleMenuBar()"
+      class="btn-close"></button>
+  </div>
+  <!-- Theme Toggle -->
+  <!-- <div class="col-1 col-md-1 me-3 me-md-0 d-flex d-md-none flex-row-reverse align-items-center justify-content-evenly">
+    <input type="checkbox" class="col-1 border border-1" id="themeToggle" (change)="toggleTheme()"
+      [checked]="isDarkMode" />
+    <img class="col-8 me-2 me-md-0 col-md-2" [src]="isDarkMode ? 'night-mode.png' : 'light-mode.png'"
+      [ngStyle]="{ filter: isDarkMode ? 'invert(1)' : 'none' }" alt="Theme icon">
+  </div> -->
+  <div class="col-10  mt-5 ">
+    <div class="col-12 d-flex flex-column gap-4 align-items-start justify-content-between">
+      <li class="list-unstyled" *ngFor="let link of navItems">
+
+        <!-- <ng-container *ngIf="link === 'Products' || link === 'Services'; else normalLink">
+          <div class="accordion-item ">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button px-0 py-2 bg-transparent shadow-none d-flex justify-content-between align-items-center w-100"
+                type="button" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" (click)="toggleDropdown(link)">
+                {{ link }}
+                <span class="ms-2 transition" style="font-size: 10px;" [class.rotate]="isDropdownOpen(link)">▼</span>
+              </button>
+            </h2>
+
+            <div class="accordion-collapse overflow-hidden"
+              [style.maxHeight]="isDropdownOpen(link) ? getDropdownItems(link).length * 45 + 'px' : '0px'"
+              [style.transition]="'max-height 0.4s ease'">
+              <div class="d-flex flex-column ps-3">
+                <button *ngFor="let i of getDropdownItems(link)" class="btn btn-link text-start w-100 py-2 px-2"
+                  (click)="routeTo(i, i)">
+                  {{ i }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container> -->
+
+        <ng-container *ngIf="link === 'Products' || link === 'Services' || link === 'Resources'; else normalLink">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button px-0 py-2 bg-transparent shadow-none d-flex justify-content-between align-items-center w-100"
+                type="button" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" (click)="toggleDropdown(link)">
+                {{ link }}
+                <span class="ms-2 transition" style="font-size: 10px;" [class.rotate]="isDropdownOpen(link)">▼</span>
+              </button>
+            </h2>
+
+            <div class="accordion-collapse overflow-hidden"
+              [style.maxHeight]="isDropdownOpen(link) ? getDropdownItems(link).length * 45 + 'px' : '0px'"
+              [style.transition]="'max-height 0.4s ease'">
+              <div class="d-flex flex-column ps-3">
+                <button *ngFor="let i of getDropdownItems(link)" class="btn btn-link text-start w-100 py-2 px-2"
+                  (click)="routeTo(i, i)">
+                  {{ i }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+
+        <!-- <ng-container *ngIf="link === 'Products'; else normalLink">
+          <div class="accordion-item ">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button px-0 py-2 bg-transparent shadow-none d-flex justify-content-between align-items-center w-100"
+                type="button" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" (click)="toggleProducts()">
+                {{ link }}
+                <span class="ms-2 transition " style="font-size: 10px;" [class.rotate]="isProductsOpen">▼</span>
+              </button>
+            </h2>
+
+            <div class="accordion-collapse overflow-hidden"
+              [style.maxHeight]="isProductsOpen ? productDropDown.length * 45 + 'px' : '0px'"
+              [style.transition]="'max-height 0.4s ease'">
+              <div class="d-flex flex-column ps-3">
+                <button *ngFor="let i of productDropDown" class="btn btn-link text-start w-100 py-2 px-2"
+                  (click)="routeTo(i,i)">
+                  {{ i }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container> -->
+
+
+        <ng-template #normalLink>
+          <a class="text-decoration-none " style="font-size: 15px;cursor: pointer;"
+            [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" (click)="scrollTo(link)">
+            {{ link }}
+          </a>
+        </ng-template>
+
+      </li>
+    </div>
+  </div>
+</div>

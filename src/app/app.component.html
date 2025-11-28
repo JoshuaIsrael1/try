@@ -1,0 +1,8 @@
+<div class="spinner-wrapper" *ngIf="spinner.loading$ | async as isLoading" [class.hide]="!isLoading">
+  <img src="/boclogo2.png" alt="Loading..." class="spinner-logo" />
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+</div>
+
+<router-outlet />

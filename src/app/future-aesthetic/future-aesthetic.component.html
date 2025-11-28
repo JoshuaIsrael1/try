@@ -1,0 +1,57 @@
+<!-- aesthetic-clinic.component.html -->
+<div class="container py-5">
+  <!-- Hero Section -->
+  <div class="text-center mb-5">
+    <h1 class="fw-bold display-5">
+      The Future of Aesthetic Clinics: <br>
+      <span class="g-text">Why Digital Management Software is a Game-Changer</span>
+    </h1>
+    <p class="lead mt-3">
+      The aesthetic industry in India is expanding rapidly, with an increasing number of people seeking treatments
+      to enhance their wellness, beauty, and confidence. However, as clinics expand, so do the challenges—managing
+      patient records, scheduling appointments, processing payments, and ensuring compliance.
+    </p>
+    <p class="lead fw-semibold text-dark">
+      This is where aesthetic clinic management software becomes a true game-changer.
+    </p>
+  </div>
+
+  <!-- Features Section -->
+  <div class="row g-4">
+    <div class="col-md-6" *ngFor="let feature of [
+      {title: 'Streamlined Appointment Scheduling', text: 'Traditional scheduling often causes double bookings, miscommunication, and no-shows. With digital clinic scheduling software, appointments are automated, reminders are sent instantly, and clients enjoy a seamless booking experience—leading to higher satisfaction and revenue.'},
+      {title: 'Centralized Patient Records & History', text: 'Aesthetic treatments require accurate records. A digital clinic management system securely stores consultation notes, treatment plans, and medical histories in one place—ensuring compliance while allowing staff to deliver personalized services efficiently.'},
+      {title: 'Enhanced Customer Experience', text: 'Today’s clients expect convenience. With online booking, automated follow-ups, and personalized reminders, clinic software elevates the customer experience, creating stronger relationships and higher retention.'},
+      {title: 'Smarter Billing & Inventory Management', text: 'Managing consumables and payments can drain valuable time. Integrated billing and inventory tracking help clinics reduce errors, improve efficiency, and ensure they never run out of essential supplies.'},
+      {title: 'Data-Driven Growth', text: 'With built-in reports and analytics, clinics can track revenue trends, identify popular treatments, and measure staff performance. These insights empower smarter decisions and long-term scalability.'},
+      {title: 'Scalable & Future-Ready', text: 'Whether you’re running a single clinic or managing multiple branches, aesthetic clinic software grows with your business. It adapts to changing needs, ensuring long-term sustainability.'}
+    ]">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-primary">{{ feature.title }}</h5>
+          <p class="card-text">{{ feature.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Digital Tools Section -->
+  <div class="mt-5">
+    <div class="card shadow border-0">
+      <div class="card-body p-4">
+        <h3 class="fw-bold text-dark">Why Digital Tools Are the Future</h3>
+        <p class="mt-3">
+          The aesthetic clinic industry is shifting towards digitization, automation, and customer-first
+          experiences.
+          By adopting aesthetic clinic management software, businesses simplify daily operations while
+          unlocking new opportunities for revenue and growth.
+        </p>
+        <div class="alert alert-info mt-3">
+          <strong>Key Takeaway:</strong> Aesthetic clinics that invest in digital management software will not
+          only streamline operations but also deliver exceptional patient care and stay competitive in an
+          evolving market.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

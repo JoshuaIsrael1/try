@@ -1,0 +1,31 @@
+<h1 class="col-12 text-center mb-4 mb-md-3  mt-md-5 mt-2">Our <span class="g-text">Products</span>
+</h1>
+
+<div class="site-outer mt-0 mt-md-1 px-0 px-md-1">
+  <div class="site-inner">
+    <section class="container-fluid">
+      <div class="row">
+        <div class="accordion-group " id="accordion" (mouseenter)="pauseAutoSlide()" (mouseleave)="resumeAutoSlide()">
+          <div *ngFor="let item of products; let i = index; trackBy: trackByFn"
+            class="accordion-item d-flex flex-column justify-content-start align-items-start"
+            [ngClass]="{ out: activeIndex === i }" [style.background-image]="'url(' + item.img + ')'"
+            (mouseenter)="setActive(i)" tabindex="0" (focus)="setActive(i)">
+            <div class="position-absolute top-0 start-0 p-2  d-flex align-items-start   justify-content-start z-3"
+              style="width: 120px;height: 80px;background: linear-gradient(145deg,rgba(255, 147, 210, 0.97),rgba(0, 204, 255, 0.97));border-radius: 0rem 0rem 5rem 0rem;">
+              <span class="text-white">{{item.title}}</span>
+            </div>
+            <a target="_blank" class="d-block text-decoration-none w-100 h-100">
+              <div class="accordion-overlay"></div>
+              <!-- <h3 class="product-title g-text ">{{ item.title }}</h3> -->
+              <section class="hidden-xs"></section>
+            </a>
+            <p class="text-white description">{{ item.description }}</p>
+            <button class="btn btn-B z-3" (click)="routeTO(item.link)">
+              Read More <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

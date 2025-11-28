@@ -1,0 +1,19 @@
+/* src/app/pages/custom-business-solutions/custom-business-solutions.component.scss */
+h1,
+h2,
+h3 {
+    color: #0d3b66;
+}
+
+.btn-primary {
+    background-color: #0d3b66;
+    border: none;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}

@@ -1,0 +1,183 @@
+.stats-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background: #fff;
+    gap: 30px;
+
+    .stat-item {
+        text-align: center;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right,
+                    rgba(255, 131, 152, 0.527),
+                    rgba(0, 238, 255, 0.493));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #333;
+        }
+    }
+
+    .divider {
+        width: 2px;
+        height: 40px;
+        background: linear-gradient(to bottom,
+                rgba(255, 131, 152, 0.527),
+                rgba(0, 238, 255, 0.493));
+    }
+}
+
+///--------------------
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+* {
+    font-family: Lato, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 60%;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    margin: 20px 0;
+}
+
+.question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 20px 80px 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question::after {
+    content: "\002B";
+    font-size: 2.2rem;
+    position: absolute;
+    right: 20px;
+    transition: 0.2s;
+}
+
+.question.active::after {
+    transform: rotate(45deg);
+}
+
+.answercont {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.answer {
+    padding: 0 20px 20px;
+    line-height: 1.5rem;
+
+    a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .wrapper {
+        width: 80%;
+    }
+}
+
+
+/// --------------
+/// ------------
+.testimonial-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-top: 2rem;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.profile-circle {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.stars i {
+    font-size: 1.1rem;
+}
+
+
+/// -------------
+/// ---------------
+.text-gradient {
+    background: linear-gradient(90deg, #ff6b6b, #5f27cd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #ff6b6b;
+    // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    // transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/// -----------------
+/// 

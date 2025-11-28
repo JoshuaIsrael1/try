@@ -1,0 +1,123 @@
+.accordion-group {
+  display: flex;
+  width: 100%;
+  height: 78vh;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .accordion-item {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex: 1; // keeps equal sizing until active
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 2vmin;
+
+    /* GPU hints */
+    will-change: transform, opacity;
+    transition: transform 0.5s ease, opacity 0.5s ease,
+      background-color 0.5s ease;
+
+    &:focus {
+      outline: 2px solid #fff;
+    }
+
+    .product-title {
+      // color: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 2rem;
+      z-index: 2;
+      position: relative;
+      // text-shadow: 0 0 5px rgba(255, 255, 255, 0.479);
+    }
+
+    .accordion-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 0.5s ease;
+      z-index: 1;
+    }
+
+    .description {
+      z-index: 2;
+      font-size: 0.95rem;
+      margin: 1rem 0;
+      width: 300px;
+      opacity: 0;
+      transform: translateY(10px);
+      display: block;
+      /* keep it in flow, fade instead */
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .product-image {
+      z-index: 2;
+      position: relative;
+      border-radius: 8px;
+    }
+
+    /* Active (expanded) card */
+    &.out {
+
+      width: 40vw;
+      max-width: 39vw;
+      min-width: 40vw;
+      z-index: 2;
+
+      .accordion-overlay {
+        // background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.322);
+
+      }
+
+      .description {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .accordion-group {
+    flex-direction: row;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .accordion-item {
+      flex: 0 0 45%;
+      width: 45%;
+      margin-bottom: 10px;
+      height: 220px;
+      max-height: 320px;
+      min-height: 380px;
+      transform: none !important;
+
+      /* disable scaling for perf */
+      .description {
+        font-size: x-small;
+        width: 98%;
+      }
+
+      &.out {
+        transform: none;
+        width: 45%;
+        max-width: 45%;
+        min-width: 45%;
+      }
+    }
+  }
+}

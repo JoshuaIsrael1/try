@@ -1,0 +1,93 @@
+<div style="height: 10vh;" class="d-none d-md-block"></div>
+
+<h1 class="col-12  text-center my-3">Contact Us</h1>
+
+<div class="col-12 d-flex  align-items-center justify-content-center my-3 mb-5 " style="height: 65vh;" id="Contact">
+
+  <div
+    class="col-md-10 d-flex flex-column flex-md-row align-items-center justify-content-evenly  z-2 position-absolute bgBlur shadow"
+    style="height: 65vh;">
+
+    <div
+      class=" p-4 h-100 col-md-7  d-flex align-items-center justify-content-center animate__animated animate__fadeInUp">
+      <!-- <h3 class="text-center mb-4">Contact Us</h3> -->
+      <form [formGroup]="contactForm">
+
+
+        <div class="d-flex align-items-center justify-content-between ">
+          <div class="form-floating mb-3 col-5">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
+              formControlName="name">
+            <label for="name">Name</label>
+          </div>
+
+          <div class="form-floating col-6 mb-3">
+            <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="1234567890" required
+              formControlName="phone">
+            <label for="mobile">Mobile Number</label>
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required
+            formControlName="email">
+          <label for="email">Email address</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea class="form-control" id="feedback" name="feedback" placeholder="Your Message" style="height: 120px;"
+            required formControlName="message"></textarea>
+          <label for="feedback">Message</label>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="sumbitBtn btn btn-lg" (click)="onSubmit()">
+            Submit
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <div class=" h-100 col-md-5 d-none d-md-flex d-flex flex-column align-items-center justify-content-evenly "
+      style="height: 100%;">
+      <div class="col-12 ">
+        <div class="col-10 py-3 ps-3 bg-primary-subtle">Google Map</div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6835098021943!2d80.26162407418478!3d13.055806287267352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f19d658caf%3A0x36735cc63f578dce!2sBocxy%20Technologies%20Private%20Limited.!5e0!3m2!1sen!2sin!4v1756467836803!5m2!1sen!2sin"
+          class="col-10 " style="border:0;height: 100%;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-12 mt-3 d-flex flex-column align-items-start gap-3 justify-content-evenly">
+        <a href="tel:+919787897873" class="btn btn-B btn-lg rounded-2 col-10">Call us</a>
+        <!-- <button class="btn btn-B btn-lg rounded-2 col-10">Whats App</button> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-10 border position-absolute d-flex flex-wrap z-1" style="height: 60vh; position: relative;"
+    #container>
+    <div class="fBox1 rounded-circle bgBox" #box1></div>
+    <div class="fBox2 bgBox rounded-circle" #box2></div>
+    <div class="fBox3 bgBox rounded-circle" #box3></div>
+  </div>
+</div>
+
+<div class=" h-100 col-md-5 col-12  d-md-none d-flex flex-column align-items-center justify-content-evenly "
+  style="height: 100%;">
+  <div class="col-12  d-flex flex-column align-items-center justify-content-evenly ">
+    <div class="col-10 py-3 ps-3 bg-primary-subtle">Google Map</div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6835098021943!2d80.26162407418478!3d13.055806287267352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f19d658caf%3A0x36735cc63f578dce!2sBocxy%20Technologies%20Private%20Limited.!5e0!3m2!1sen!2sin!4v1756467836803!5m2!1sen!2sin"
+      class="col-10 " style="border:0;height: 100%;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="col-12 mt-3 d-flex flex-column align-items-center gap-3 justify-content-evenly">
+    <a href="tel:+919787897873" class="btn btn-B btn-lg rounded-2 col-10">Call us</a>
+    <!-- <button class="btn btn-B btn-lg rounded-2 col-10">Whats App</button> -->
+  </div>
+</div>
+
+<div class="popup-toast" *ngIf="showPopup">
+  {{ popupMessage }}
+</div>

@@ -1,0 +1,12 @@
+<div
+    class="success-page d-flex flex-column justify-content-center align-items-center vh-100 text-center position-relative">
+
+    <div class="icon-animation">
+        <i *ngFor="let icon of icons" class="fa {{ icon }}"></i>
+    </div>
+
+    <h2 class="text-success mb-2">Thank you for contacting Us!</h2>
+    <p class="mb-3">We will contact you soon.</p>
+
+    <button class="btn btn-B mt-3" (click)="goBack()">Back to Home</button>
+</div>

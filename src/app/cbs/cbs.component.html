@@ -1,0 +1,152 @@
+<!-- src/app/pages/custom-business-solutions/custom-business-solutions.component.html -->
+<div class="container my-5">
+  <!-- Header -->
+  <div class="text-center mb-5">
+    <h1 class="fw-bold">Bocxy: Your Partner for<span class="g-text"> Customised Business Solutions & Unrivalled
+        Growth</span></h1>
+    <p class="lead mt-3">
+      In a market saturated with generic, one-size-fits-all software, your unique business deserves a solution
+      that's crafted just for you.
+    </p>
+  </div>
+
+  <!-- Intro Section -->
+  <div class="row mb-5">
+    <div class="col-md-12">
+      <p>
+        Off-the-shelf tools often force you to adapt your workflows to their limitations, rather than empowering
+        your inherent strengths. This is where customised business solutions become your definitive advantage.
+        <strong>Bocxy</strong> is a premier custom software company, dedicated to designing and developing
+        bespoke
+        software that perfectly aligns with your specific operational needs and strategic ambitions.
+      </p>
+      <p>
+        Whether you're a burgeoning local business or a complex enterprise, Bocxy’s custom software for business
+        integrates seamlessly into your ecosystem, eliminating inefficiencies and propelling you towards
+        unmatched
+        operational efficiency and sustained growth.
+      </p>
+    </div>
+  </div>
+
+  <!-- Why Invest Section -->
+  <div class="mb-5">
+    <h2 class="fw-bold mb-3">Why Invest in Custom Software for Your Business?</h2>
+    <p class="my-3">
+      Choosing custom software for business is a strategic decision that yields long-term benefits far beyond
+      initial investment. Here's why bespoke solutions outshine generic alternatives:
+    </p>
+    <div class="row g-4">
+      <div class="col-md-6" *ngFor="let reason of [
+        {title: 'Perfect Workflow Alignment', text: 'Standard software often forces you to compromise. Our customised business solutions are built around your exact processes, ensuring every function supports your unique workflows, not hinders them. This leads to dramatically increased efficiency and reduced friction.'},
+
+        {title: 'Unmatched Competitive Advantage', text: ' Gain an edge that off-the-shelf competitors cant replicate. With software designed exclusively for your operations, you can offer unique services, streamline client experiences, or optimize internal processes in ways your rivals simply cant match. '},
+        {title: 'Scalability for Future Growth', text: 'Generic solutions often hit a ceiling. Custom enterprise software and solutions for local businesses are inherently designed with your growth trajectory in mind. As your business evolves, your software scales seamlessly with it, adapting to new services, increased client volume, or market demands without costly overhauls'},
+        {title: 'Superior Security & Compliance', text: 'When you rely on mass-market software, youre susceptible to common vulnerabilities. Custom software for business allows for security protocols and compliance features to be built directly into the system, tailored to your specific industry regulations and data protection needs.'},
+        {title: 'Long-Term Cost-Effectiveness', text: 'While initial costs might seem higher, customised business solutions eliminate recurring licensing fees for unused features, costly integrations of disparate systems, and the need for frequent workarounds. Over time, a perfectly tailored system delivers a far greater ROI.'}
+      ]">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{reason.title}}</h5>
+            <p class="card-text">{{reason.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Process Section -->
+  <div class="mb-5">
+    <h2 class="fw-bold mb-3">Bocxy: Your Expert Custom Software Design Company</h2>
+    <p>
+      As a leading custom software company and one of the top custom software design companies, Bocxy brings
+      unparalleled expertise and a client-centric approach to every project. We partner with you to understand
+      your challenges, define your vision, and build custom business management software that delivers tangible
+      results.
+    </p>
+
+    <div class="accordion" id="processAccordion">
+      <div class="accordion-item" *ngFor="let step of [
+        {title: 'In-Depth Discovery', text: ' We start by deeply understanding your business model, current pain points, and future goals, ensuring every line of code addresses a real need.'},
+        {title: 'Strategic Design & Development', text: ' Our expert team leverages cutting-edge technology and best practices to design intuitive, robust, and scalable solutions.'},
+        {title: 'Seamless Integration', text: 'We ensure your new custom software integrates flawlessly with any existing third-party tools or systems you rely on.'},
+        {title: 'Ongoing Support & Evolution', text: 'Our partnership doesn\'t end at launch. We provide continuous support, maintenance, and iterative development to ensure your software remains at the forefront of your business needs.'}
+      ]; let i=index">
+        <h2 class="accordion-header" [id]="'heading'+i">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#collapse'+i" aria-expanded="false" [attr.aria-controls]="'collapse'+i">
+            {{step.title}}
+          </button>
+        </h2>
+        <div [id]="'collapse'+i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading'+i"
+          data-bs-parent="#processAccordion">
+          <div class="accordion-body">
+            {{step.text}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="my-3">
+      Whether you need custom software for local business operations – perhaps streamlining your client bookings
+      and inventory – or require complex custom enterprise software to unify multiple departments and locations,
+      Bocxy has the expertise to deliver.
+    </p>
+  </div>
+
+  <!-- Key Benefits -->
+  <div class="mb-5">
+    <h2 class="fw-bold mb-3">Key Benefits of Bocxy's Customised Business Solutions</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Tailored Workflow Integration: Software built to match your exact operational
+        flow, reducing manual effort and errors.</li>
+      <li class="list-group-item">Enhanced Scalability : Solutions designed to grow with your business, supporting
+        new features and increased demand.</li>
+      <li class="list-group-item">Superior Security & Compliance : Industry-specific security measures and
+        regulatory adherence built into the core.</li>
+      <li class="list-group-item">Seamless Integration : Connects effortlessly with banks, e-signers, WhatsApp,
+        SMS services, and other essential tools.</li>
+      <li class="list-group-item">Dedicated Ownership & Support : You own the intellectual property, backed by
+        Bocxy's expert support and maintenance.</li>
+    </ul>
+  </div>
+
+  <!-- CTA -->
+  <div class="text-center mb-5">
+    <h3 class="fw-bold">Transform Your Vision into Reality</h3>
+    <p>
+      Don't settle for generic. Empower your business with software that's as unique as your ambition. Bocxy, your
+      trusted custom software company, is ready to build the perfect solution for you. </p>
+    <!-- <a href="tel:+919787897873" class="btn btn-B btn-lg">REQUEST A FREE CONSULTATION</a> -->
+    <div class="col-12 d-flex align-items-center justify-content-center my-3">
+      <a href="tel:+919787897873" class="btn btn-B me-3"> Start a free trial</a>
+      <a href="tel:+919787897873" class="btn btn-BO">Book a free demo</a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="mb-5">
+    <h2 class="fw-bold mb-3">FAQ</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item" *ngFor="let faq of [
+        {q: 'What types of businesses can benefit from Bocxy\'s customised business solutions?', a: 'Bocxy provides customised business solutions for a wide range of organizations, from small custom software for local business needs (like a single salon or clinic) to comprehensive custom enterprise software for larger, multi-location operations. If your business has unique processes or finds off-the-shelf software restrictive, a custom solution can be highly beneficial.'},
+        {q: 'How does Bocxy, as a custom software company, ensure our specific needs are met?', a: 'As a dedicated custom software company, Bocxy employs a highly collaborative discovery and development process. We work closely with you through workshops and detailed consultations to deeply understand your workflows and pain points, ensuring the final custom business management software precisely matches your unique requirements.'},
+        {q: 'Is custom software more expensive than off-the-shelf options?', a: 'While the upfront investment for custom software for business can sometimes be higher, it often proves more cost-effective in the long run. You avoid recurring licensing fees for unused features, costly integrations, and constant workarounds. Bocxy\'s solutions provide a superior ROI by perfectly fitting your needs and scaling without limitations.'},
+        {q: 'What kind of support does Bocxy offer after delivering custom software?', a: 'Bocxy prides itself on being one of the custom software design companies that offers comprehensive post-launch support. We provide ongoing maintenance, updates, and dedicated technical assistance to ensure your custom business management software continues to perform optimally and evolves with your business needs.'}
+      ]; let i=index">
+        <h2 class="accordion-header" [id]="'faqHeading'+i">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#faqCollapse'+i" aria-expanded="false" [attr.aria-controls]="'faqCollapse'+i">
+            {{faq.q}}
+          </button>
+        </h2>
+        <div [id]="'faqCollapse'+i" class="accordion-collapse collapse" [attr.aria-labelledby]="'faqHeading'+i"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            {{faq.a}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

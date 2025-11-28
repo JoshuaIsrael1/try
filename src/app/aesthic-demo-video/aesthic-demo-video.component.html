@@ -1,0 +1,35 @@
+<div class="video-section mainBgLight py-5 d-flex flex-column align-items-center justify-content-center text-center">
+    <h2 class="fw-bold mb-3" data-aos="fade-down">
+        Experience Our Aesthetic Clinic Software in Action
+    </h2>
+    <p class="mb-4" data-aos="fade-up" data-aos-delay="100">
+        Watch this short demo video to see how our platform enhances your clinic’s
+        efficiency and patient care.
+    </p>
+
+    <!-- Video Thumbnail with Play Button -->
+    <div class="position-relative" data-aos="zoom-in" data-aos-delay="200">
+        <img src="video/aesthetic_thumb.png" class="rounded-4 shadow-lg video-poster" alt="Clinic Demo Video" />
+
+        <button class="btn btn-light btn-lg rounded-circle shadow play-btn" (click)="openModal()">
+            <i class="bi bi-play-fill fs-2 text-primary"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="videoModal2" tabindex="-1" aria-hidden="true" #videoModal2>
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark border-0">
+            <div class="modal-body p-0 position-relative">
+                <button type="button" class="btn-close btn-close-white position-absolute end-0 m-3 z-3"
+                    data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
+
+                <video #mainVideo2 class="w-100" controls>
+                    <source src="video/aesthetic_video.mp4" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+h1,
+h2,
+h3 {
+    color: #1c2a4a;
+}
+
+.btn-primary {
+    background: #5c6bc0;
+    border: none;
+    padding: 10px 24px;
+    font-weight: 600;
+}
+
+.card {
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+}
+
+.accordion-button {
+    background: #f8f9fa;
+}

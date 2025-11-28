@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+
+@font-face {
+  font-family: "wild_worldbold";
+  src: url("https://assets.codepen.io/756881/wild_world-webfont.woff2")
+      format("woff2"),
+    url("https://assets.codepen.io/756881/wild_world-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: #111;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  min-height: auto;
+  // padding: 5% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+$logoFs: clamp(40px, 15vw, 120px);
+
+.heading > p {
+  // font-family: "wild_worldbold";
+
+  font-size: $logoFs;
+  font-weight: 700;
+  // text-transform: lowercase;
+  color: #111;
+  -webkit-text-stroke-width: 1.5px;
+  // -webkit-text-stroke-color: rgb(88, 196, 46);
+  margin: 0;
+}
+
+.heading_light > P {
+  color: #ffffff;
+}
+
+.text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.text-container p {
+  position: absolute;
+  // text-transform: lowercase;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  // font-family: "wild_worldbold";
+  font-size: $logoFs;
+  font-weight: 700;
+
+  color: transparent;
+  // -webkit-text-stroke-width: 0.5px;
+  // -webkit-text-stroke-color: rgb(255, 255, 255);
+  pointer-events: none;
+  background: linear-gradient(
+    45deg,
+    #f472b6,
+    #fb7185,
+    #a78bfa,
+    #06b6d4,
+    #f472b6
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: transparent;
+  background-clip: text;
+  //filter: drop-shadow(2px 2px 10px black);
+}
+
+.text-container p:nth-child(1) {
+  opacity: 10%;
+}
+
+.text-container p:nth-child(2) {
+  opacity: 20%;
+}
+.text-container p:nth-child(3) {
+  opacity: 30%;
+}
+.text-container p:nth-child(4) {
+  opacity: 40%;
+}
+.text-container p:nth-child(5) {
+  opacity: 50%;
+}
+.text-container p:nth-child(6) {
+  opacity: 100%;
+}
+
+.text-container_light p {
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.text-container p:first-child {
+  color: rgb(255, 255, 255);
+
+  z-index: 10;
+  background: linear-gradient(
+    45deg,
+    #f472b6,
+    #fb7185,
+    #a78bfa,
+    #06b6d4,
+    #f472b6
+  );
+  // -webkit-text-stroke-width: 1.5px;
+  // -webkit-text-stroke-color: rgb(255, 255, 255);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: transparent;
+  background-clip: text;
+  color: transparent;
+  background-size: 100%;
+  // animation: gradientMove 6s ease infinite;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.text-container_light p:first-child {
+  color: rgb(0, 0, 0);
+}
+
+.addShadowIndark {
+  filter: drop-shadow(0px 0px 5px black);
+}

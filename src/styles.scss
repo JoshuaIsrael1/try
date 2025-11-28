@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif ;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+// body {
+//   background-color: black !important;
+//   color: white !important;
+// }
+.btn-B {
+  background: linear-gradient(145deg, rgba(255, 131, 203, 0.829), rgba(0, 238, 255, 0.767));
+  color: white !important;
+}
+
+.btn-BO {
+  background: transparent;
+  background: linear-gradient(145deg, rgba(255, 131, 203, 0.229), rgba(0, 238, 255, 0.229));
+  color: white;
+}
+
+// .g-text {
+//   background: linear-gradient(45deg,
+//       rgba(255, 43, 167, 0.836),
+//       rgb(0, 225, 255));
+//   background-size: 100% 100%;
+//   background-repeat: no-repeat;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text;
+//   /* For non-WebKit browsers */
+// }
+// .g-text {
+//   background: linear-gradient(90deg, rgba(255, 43, 167, 0.836), rgb(0, 225, 255));
+//   background-size: 200% auto;
+//   /* Stretch background across 200% width */
+//   background-position: left center;
+//   background-repeat: no-repeat;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text;
+//   display: inline-block;
+//   /* Ensure size applies correctly */
+// }
+
+.g-text {
+  // background: linear-gradient(90deg, rgba(255, 43, 167, 0.836), rgb(0, 225, 255));
+  background: linear-gradient(90deg, rgb(0, 225, 255), rgba(255, 43, 167, 0.836));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  // padding: 0 1em;
+  /* Add horizontal padding */
+}
+
+
+
+.g-text2 {
+  background: linear-gradient(to right,
+      rgba(255, 43, 167, 0.636),
+      rgb(0, 225, 255, 0.636));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* For non-WebKit browsers */
+}
+
+.mainBgLight {
+  background: linear-gradient(90deg,
+      rgba(255, 131, 214, 0.185),
+      rgba(0, 238, 255, 0.212));
+}
+
+.b-fs {
+  font-size: 0.8rem !important;
+}
+
+.accordion-button {
+
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(transparent);
+}
